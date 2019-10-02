@@ -1,0 +1,53 @@
+  <!-- 查看网络连接 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 拥有完全的网络访问权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 修改或删除您的USB存储设备中的内容 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 查看WLAN连接 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 查看网络连接 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 读取手机状态和身份 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_SETTINGS" />
+    <!-- 修改系统设置 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 拥有完全的网络访问权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 读取您的USB存储设备中的内容 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 检索正在运行的应用 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <supports-screens
+        android:anyDensity="true"
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:resizeable="true" />
+    <activity
+        android:label="浏览器"
+        android:name="com.androlua.LuaWebView"
+        android:process=":h5"
+        android:screenOrientation="portrait"
+        android:configChanges="keyboardHidden|orientation|screenSize" />
+    <activity
+        android:label="浏览器"
+        android:name="com.androlua.MyWebView"
+        android:process=":h5"
+        android:screenOrientation="portrait"
+        android:configChanges="keyboardHidden|orientation|screenSize" />
+    <activity
+        android:name="com.tencent.smtt.sdk.VideoActivity"
+        android:exported="false"
+        android:launchMode="singleTask"
+        android:configChanges="keyboardHidden|orientation|screenSize"
+        android:alwaysRetainTaskState="true">
+        <intent-filter>
+            <action
+                android:name="com.tencent.smtt.tbs.video.PLAY" />
+            <category
+                android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </activity>
